@@ -1,227 +1,368 @@
 models:
+ 
   - name: fct_hosts_micro
+ 
     description: "Fact table containing host records loaded incrementally using the microbatch strategy."
 
     columns:
+ 
       - name: host_id
+ 
         description: "Unique identifier for the host."
+ 
         tests:
+ 
           - unique
+ 
           - not_null
 
       - name: host_name
+ 
         description: "Name of the host."
+ 
         tests:
+ 
           - not_null
 
       - name: is_superhost
+ 
         description: "Indicates whether the host is a superhost."
+ 
         tests:
+ 
           - not_null
+ 
           - accepted_values:
+ 
               values: [true, false]
 
       - name: created_at
+ 
         description: "Timestamp when the host record was created."
+ 
         tests:
+ 
           - not_null
 
       - name: updated_at
+ 
         description: "Timestamp when the host record was last updated."
 
 
   - name: fct_hosts_schema_change1
+ 
     description: "Incremental fact table containing host details loaded using the merge strategy."
 
     columns:
+ 
       - name: host_id
+ 
         description: "Unique identifier for a host."
+ 
         tests:
+ 
           - unique
+ 
           - not_null
 
       - name: host_name
+ 
         description: "Name of the host."
+ 
         tests:
+ 
           - not_null
 
       - name: is_superhost
+ 
         description: "Indicates whether the host has superhost status."
+ 
         tests:
+ 
           - not_null
+ 
           - accepted_values:
+ 
               values: [true, false]
 
       - name: created_at
+ 
         description: "Timestamp when the host record was created."
+ 
         tests:
+ 
           - not_null
 
       - name: updated_at
+ 
         description: "Timestamp when the host record was last updated."
+ 
         tests:
+ 
           - not_null
 
 
   - name: fct_hosts_schema_change2
+ 
     description: "Incremental fact table containing host information loaded using the merge strategy."
 
     columns:
+ 
       - name: host_id
+ 
         description: "Unique identifier for the host."
+ 
         tests:
+ 
           - unique
+ 
           - not_null
 
       - name: host_name
+ 
         description: "Name of the host."
+ 
         tests:
+ 
           - not_null
 
       - name: is_superhost
+ 
         description: "Indicates whether the host has superhost status."
+ 
         tests:
+ 
           - not_null
+ 
           - accepted_values:
+ 
               values: [true, false]
 
       - name: created_at
+ 
         description: "Timestamp when the host record was created."
+ 
         tests:
+ 
           - not_null
 
       - name: updated_at
+ 
         description: "Timestamp when the host record was last updated."
+ 
         tests:
+ 
           - not_null
-  
+ 
+
 
   - name: fct_hosts_schema_change3
+ 
     description: "Incremental fact table containing host information loaded using the merge strategy with schema change validation."
 
     columns:
+ 
       - name: host_id
+ 
         description: "Unique identifier for the host."
+ 
         tests:
+ 
           - unique
+ 
           - not_null
 
       - name: host_name
+ 
         description: "Name of the host."
+ 
         tests:
+ 
           - not_null
 
       - name: is_superhost
+ 
         description: "Indicates whether the host is a superhost."
+ 
         tests:
+ 
           - not_null
+ 
           - accepted_values:
+ 
               values: [true, false]
 
       - name: created_at
+ 
         description: "Timestamp when the host record was created."
+ 
         tests:
+ 
           - not_null
 
       - name: updated_at
+ 
         description: "Timestamp when the host record was last updated."
+ 
         tests:
+ 
           - not_null
 
 
   - name: fct_hosts_schema_change4
+ 
     description: "Incremental fact table containing host information loaded using the merge strategy. New columns detected in the source are automatically added to the target table."
 
     columns:
+ 
       - name: host_id
+ 
         description: "Unique identifier for the host."
+ 
         tests:
+ 
           - unique
+ 
           - not_null
 
       - name: host_name
+ 
         description: "Name of the host."
+ 
         tests:
+ 
           - not_null
 
       - name: is_superhost
+ 
         description: "Indicates whether the host has superhost status."
+ 
         tests:
+ 
           - not_null
+ 
           - accepted_values:
+ 
               values: [true, false]
 
       - name: created_at
+ 
         description: "Timestamp when the host record was created."
+ 
         tests:
+ 
           - not_null
 
       - name: updated_at
+ 
         description: "Timestamp when the host record was last updated."
+ 
         tests:
+ 
           - not_null
 
 
   - name: fct_hosts_updated
+ 
     description: "Incremental fact table containing host data loaded using the insert_overwrite strategy and partitioned by created_at year."
 
     columns:
+ 
       - name: host_id
+ 
         description: "Unique identifier for the host."
+ 
         tests:
+ 
           - not_null
 
       - name: host_name
+ 
         description: "Name of the host."
+ 
         tests:
+ 
           - not_null
 
       - name: is_superhost
+ 
         description: "Indicates whether the host is a superhost."
+ 
         tests:
+ 
           - not_null
+ 
           - accepted_values:
+ 
               values: [true, false]
 
       - name: created_at
+ 
         description: "Timestamp when the host record was created."
+ 
         tests:
+ 
           - not_null
 
       - name: updated_at
+ 
         description: "Timestamp when the host record was last updated."
+ 
         tests:
+ 
           - not_null
 
 
   - name: fct_hosts
+ 
     description: "Incremental fact table containing host data loaded using the merge strategy."
 
     columns:
+ 
       - name: host_id
+ 
         description: "Unique identifier for the host."
+ 
         tests:
+ 
           - unique
+ 
           - not_null
 
       - name: host_name
+ 
         description: "Name of the host."
+ 
         tests:
+ 
           - not_null
 
       - name: is_superhost
+ 
         description: "Indicates whether the host is a superhost."
+ 
         tests:
+ 
           - not_null
+ 
           - accepted_values:
+ 
               values: [true, false]
 
       - name: created_at
+ 
         description: "Timestamp when the host record was created."
+ 
         tests:
+ 
           - not_null
 
       - name: updated_at
+ 
         description: "Timestamp when the host record was last updated."
+ 
         tests:
+ 
           - not_null
+
+ 

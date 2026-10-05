@@ -2,10 +2,10 @@
 
 {% if host_id < 10 %}
 
-    SELECT 1 + 2
+    select 1 + 2 as result
 
 {% else %}
 
-    SELECT 2 + 5
+    select 2 + 5 as result
 
 {% endif %}

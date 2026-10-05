@@ -1,1 +1,1 @@
-{{10+2}}
+select {{ 10 + 2 }} as result

@@ -71,5 +71,3 @@ sources :
               error_after : {count: 5, period: minute}
 
 
-  - name: airbnb_2
-    databse:  
