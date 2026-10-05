@@ -12,8 +12,9 @@
 
 with cte_1 as (
 
-    select *
+    select *    
     from {{ ref('src_listings') }}
+    where created_at >= timestamp('2000-01-01')
 
 )
 

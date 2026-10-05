@@ -13,7 +13,7 @@
         cluster_by = [
             "listing_id","reviewer_name","review_sentiment"
         ],
-        require_partiton_filter = true,
+        require_partition_filter = true,
        
     )
 }}

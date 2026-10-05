@@ -2,7 +2,7 @@
     config(
         materialized = 'materialized_view',
         enable_refresh = true,
-        refresh_interval_minute = 30
+       
     )
 }}
 

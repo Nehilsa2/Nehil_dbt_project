@@ -7,7 +7,7 @@
             "granularity": "year"
         },
         partition_expiration_days = 2500,
-         require_partiton_filter = true,
+         require_partition_filter = true,
     )
 }}
 

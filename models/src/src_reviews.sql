@@ -10,7 +10,7 @@
                 "interval":1000000
             }
         },
-        require_partiton_filter = true
+        require_partition_filter = true
     )
 }}
 

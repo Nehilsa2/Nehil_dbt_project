@@ -7,8 +7,8 @@ models:
     tests:
 
       - minimum_row_count:
-
-          min_row_count: 100
+          arguments:
+            min_row_count: 100
 
     columns:
 

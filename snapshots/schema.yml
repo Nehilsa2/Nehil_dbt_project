@@ -1,67 +1,54 @@
 snapshots:
-
-  - name: snap_hosts 
-    relationships: ref('src_hosts')
+  - name: snap_hosts
     description: "This is snapshot for the src_hosts"
-    config: 
-      unique_key: 'host_id'
-      strategy: 'timestamp'
-      updated_at: 'updated_at'
-      hard_deletes: 'ignore'
-  
+
+    columns:
+      - name: host_id
+        tests:
+          - not_null
+          - unique
 
   - name: snap_hosts2
-    relationships: ref('src_hosts')
     description: "This is snapshot2 for the src_hosts"
-    config: 
-      unique_key: 'host_id'
-      strategy: 'timestamp'
-      updated_at: 'updated_at'
-      hard_deletes: 'invalidate'
+
+    columns:
+      - name: host_id
+        tests:
+          - not_null
+          - unique
 
   - name: snap_hosts3
-    relationships: ref('src_hosts')
     description: "This is snapshot3 for the src_hosts"
-    config: 
-      unique_key: 'host_id'
-      strategy: 'timestamp'
-      updated_at: 'updated_at'
-      hard_deletes: 'new_record'
-  
+
+    columns:
+      - name: host_id
+        tests:
+          - not_null
+          - unique
+
   - name: snap_hosts4
-    relationships: ref('src_hosts')
     description: "This is snapshot4 for the src_hosts"
-    config: 
-      unique_key: 'host_id'
-      strategy: 'timestamp'
-      updated_at: 'updated_at'
-      dbt_valid_to_current: "timestamp('9999-12-31 00:00:00 UTC')"
-      hard_deletes: 'invalidate'
+
+    columns:
+      - name: host_id
+        tests:
+          - not_null
+          - unique
 
   - name: snap_hosts5
-    relationships: ref('src_hosts')
     description: "This is snapshot5 for the src_hosts"
-    config: 
-      unique_key: 'host_id'
-      strategy: 'check'
-      check_cols: 'all'
-      dbt_valid_to_current: "timestamp('9999-12-31 00:00:00 UTC')"
-      hard_deletes: 'new_record'
+
+    columns:
+      - name: host_id
+        tests:
+          - not_null
+          - unique
 
   - name: snap_hosts6
-    relationships: ref('src_hosts')
     description: "This is snapshot6 for the src_hosts"
-    config: 
-      unique_key: 'host_id'
-      strategy: 'check'
-      check_cols: 'all'
-      dbt_valid_to_current: "timestamp('9999-12-31 00:00:00 UTC')"
-      hard_deletes: 'new_record'
-      snapshot_meta_column_names: 
-        dbt_valid_from: 'effective_date'
-        dbt_valid_to: 'expiration_date'
-        dbt_scd_id: 'scd_id'
-        dbt_is_deleted: 'is_deleted'
 
-
- 
+    columns:
+      - name: host_id
+        tests:
+          - not_null
+          - unique

@@ -34,21 +34,15 @@ models:
   training:
     # Config indicated by + and applies to all files under models/example/
     +schema: "{{ env_var('AIRBNB_TARGET_SCHEMA', 'air_dev') }}"
-    pre_hook: "{{audit_start()}}"
-    post_hook: "{{audit_end()}}"
+    
     src:
       +materialized: view
     dim:
       +materialized: table
-    mv:
-      +incremental: materialized_view
-      +enable_refresh: true
-      +refresh_interval_minutes: 30
-      +description: "This is the materialized view"
 
 seeds:
   training:
-    airbnb_roomtype_reference_seed:
+    airbnb_room_type_reference_seed:
       +column_types:
         room_type:  string(10)
         room_category: string(10)
