@@ -1,0 +1,65 @@
+exposures:
+  
+  - name: Dashboard_1
+    label: Nehil's Dashboard
+    type: dashboard
+    maturity: low
+    url: https://en.wikipedia.org/wiki/Data_modeling
+    description: This is a dashboard
+    depends_on: 
+      - ref('dim_hosts_cleansed')
+      - ref('dim_listing_cleansed')
+      - ref('dim_listing_w_hosts')
+    owner:
+      name: Nehil
+      email: neh@gmail.com
+
+  
+  - name: application_1
+    label: Nehil's application_1
+    type: application
+    maturity: high
+    url: https://en.wikipedia.org/wiki/Data_modeling
+    description: This is second dashboard
+    depends_on: 
+      - ref('dim_hosts_cleansed')
+    owner:
+      name: Nehil
+      email: neh@gmail.com
+  
+  - name: Notebook
+    label: Nehil's Notebook
+    type: notebook
+    maturity: high
+    url: https://en.wikipedia.org/wiki/Data_modeling
+    description: This is notebook
+    depends_on: 
+      - ref('dim_hosts_cleansed')
+    owner:
+      name: Nehil
+      email: neh@gmail.com
+
+  - name: analysis
+    label: Nehil's analysis
+    type: analysis
+    maturity: high
+    url: https://en.wikipedia.org/wiki/Data_modeling
+    description: This is analysis.
+    depends_on: 
+      - ref('dim_hosts_cleansed')
+    owner:
+      name: Nehil
+      email: neh@gmail.com
+
+
+  - name: ML_1
+    label: Nehil's ml
+    type: ml
+    maturity: high
+    url: https://en.wikipedia.org/wiki/Data_modeling
+    description: This is ML model
+    depends_on: 
+      - ref('dim_hosts_cleansed')
+    owner:
+      name: Nehil
+      email: neh@gmail.com

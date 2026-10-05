@@ -1,0 +1,38 @@
+seeds:
+ 
+  - name: airbnb_room_type_reference_seed
+    description: "This is the seed file."
+    columns: 
+      - name: room_type 
+        description: "This is the room type."
+        tests: 
+          - not_null
+          - unique
+      - name: room_category
+        tests: 
+          - not_null
+          - unique
+      - name: room_description
+        tests: 
+          - not_null
+          - unique
+      - name: property_segment
+        tests: 
+          - not_null
+          - unique
+      - name: standard_room_type
+        tests: 
+          - not_null
+          - unique
+      - name: is_active
+        tests: 
+          - not_null
+          - unique
+      - name: display_order
+        tests: 
+          - not_null
+          - unique
+      - name: reference_code
+        tests: 
+          - not_null
+          - unique

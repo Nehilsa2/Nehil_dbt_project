@@ -1,0 +1,41 @@
+room_type,room_category,room_description,property_segment,standard_room_type,is_active,display_order,reference_code
+Entire home/apt,Entire Property,Entire home or apartment,Residential,Entire property,True,1,1001
+Private room,Private Accommodation,Private room within a larger property,Residential,Private room,True,2,1002
+Shared room,Shared Accommodation,Shared room within a property,Residential,Shared room,True,3,1003
+Hotel room,Hotel Accommodation,Hotel or hotel-like accommodation,Hospitality,Hotel room,True,4,1004
+Entire apartment,Entire Property,Entire apartment,Residential,Entire property,True,5,1005
+Entire condo,Entire Property,Entire condominium,Residential,Entire property,True,6,1006
+Entire house,Entire Property,Entire house,Residential,Entire property,True,7,1007
+Entire townhouse,Entire Property,Entire townhouse,Residential,Entire property,True,8,1008
+Entire loft,Entire Property,Entire loft,Residential,Entire property,True,9,1009
+Entire guest suite,Entire Property,Entire guest suite,Residential,Entire property,True,10,1010
+Private apartment,Private Accommodation,Private apartment within a larger building,Residential,Private room,True,11,1011
+Private condo,Private Accommodation,Private condominium within a building,Residential,Private room,True,12,1012
+Private house,Private Accommodation,Private space within a house,Residential,Private room,True,13,1013
+Private townhouse,Private Accommodation,Private space within a townhouse,Residential,Private room,True,14,1014
+Private guest suite,Private Accommodation,Private guest suite,Residential,Private room,True,15,1015
+Shared apartment,Shared Accommodation,Shared accommodation in an apartment,Residential,Shared room,True,16,1016
+Shared house,Shared Accommodation,Shared accommodation in a house,Residential,Shared room,True,17,1017
+Shared condo,Shared Accommodation,Shared accommodation in a condominium,Residential,Shared room,True,18,1018
+Hotel,Hotel Accommodation,Traditional hotel accommodation,Hospitality,Hotel room,True,19,1019
+Boutique hotel,Hotel Accommodation,Boutique hotel accommodation,Hospitality,Hotel room,True,20,1020
+Hostel,Shared Accommodation,Hostel-style accommodation,Hospitality,Shared room,True,21,1021
+Guesthouse,Hotel Accommodation,Guesthouse accommodation,Hospitality,Hotel room,True,22,1022
+Bed and breakfast,Hotel Accommodation,Bed and breakfast accommodation,Hospitality,Hotel room,True,23,1023
+Serviced apartment,Entire Property,Serviced apartment,Hospitality,Entire property,True,24,1024
+Villa,Entire Property,Villa accommodation,Residential,Entire property,True,25,1025
+Cabin,Entire Property,Cabin accommodation,Residential,Entire property,True,26,1026
+Cottage,Entire Property,Cottage accommodation,Residential,Entire property,True,27,1027
+Farm stay,Entire Property,Farm-based accommodation,Specialty,Entire property,True,28,1028
+Boat,Entire Property,Boat or floating accommodation,Specialty,Entire property,True,29,1029
+Treehouse,Entire Property,Treehouse accommodation,Specialty,Entire property,True,30,1030
+Tiny house,Entire Property,Tiny house accommodation,Specialty,Entire property,True,31,1031
+Earth house,Entire Property,Earth-house accommodation,Specialty,Entire property,True,32,1032
+Camper/RV,Entire Property,Camper or recreational vehicle,Specialty,Entire property,True,33,1033
+Houseboat,Entire Property,Houseboat accommodation,Specialty,Entire property,True,34,1034
+Private villa,Private Accommodation,Private villa room or space,Residential,Private room,True,35,1035
+Private cottage,Private Accommodation,Private cottage room or space,Residential,Private room,True,36,1036
+Shared hostel room,Shared Accommodation,Shared hostel room,Hospitality,Shared room,True,37,1037
+Dormitory room,Shared Accommodation,Dormitory-style room,Hospitality,Shared room,True,38,1038
+Luxury hotel room,Hotel Accommodation,Luxury hotel room,Hospitality,Hotel room,True,39,1039
+Budget hotel room,Hotel Accommodation,Budget hotel room,Hospitality,Hotel room,True,40,1040

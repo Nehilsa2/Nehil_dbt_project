@@ -1,0 +1,75 @@
+sources :
+  - name: airbnb
+    database : racko-master-project-505113
+    schema: airbnb_raw
+    tables: 
+        - name: hosts 
+          identifier: raw_hosts
+          columns: 
+            - name: ID
+              description: "This is host id"
+            - name : name
+              description : "This is host name"
+            - name: is_superhost
+              description: "Superhost status of the host"
+            - name : created_at
+              description : "this is date at which data created"
+            - name : updated_at
+              description : " This is date at which data is updated"
+          config:
+            loaded_at_field : created_at
+            freshness :
+              warn_after : {count: 1, period: minute}
+              error_after : {count: 5, period: minute}
+ 
+  
+        - name: reviews 
+          identifier: raw_reviews
+          columns: 
+            - name: listing_id
+              description: "This is listing id"
+            - name : date
+              description : "This is date"
+            - name: reviewer text
+              description: "This s review text"
+            - name : comments
+              description : "Comments given"
+            - name : sentiment
+              description : "Sentiments Provided"
+          config:
+            loaded_at_query: 
+              select date from {{source('airbnb', 'reviews')}}
+              where listing_id = select date from {{source('airbnb', 'reviews')}}
+            freshness :
+              warn_after : {count: 1, period: minute}
+              error_after : {count: 5, period: minute}
+        - name: listings 
+          identifier: raw_listings
+          columns: 
+            - name: ID
+              description: "This is listing id"
+            - name : listing_url
+              description : "This is listing url"
+            - name: name
+              description: "This is listing name"
+            - name : room_type
+              description : "this is room type"
+            - name : minimum_nights
+              description : " Minimum nights stayed"
+            - name : host_id
+              description : " This is host id"
+            - name : price
+              description : "This is the total price"
+            - name : created_at
+              description : "this is date at which data created"
+            - name : updated_at
+              description : " This is date at which data is updated"
+          config:
+            loaded_at_field : created_at
+            freshness :
+              warn_after : {count: 1, period: minute}
+              error_after : {count: 5, period: minute}
+
+
+  - name: airbnb_2
+    databse:  

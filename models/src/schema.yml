@@ -1,0 +1,106 @@
+models:
+  - name : src_hosts
+    description : "This is the source hosts table"
+    columns :
+      - name: ID
+        description: "This is host id"
+      - name : name
+        description : "This is host name"
+      - name: is_superhost
+        description: "Superhost status of the host"
+      - name : created_at
+        description : "this is date at which data created"
+      - name : updated_at
+        description : " This is date at which data is updated"
+
+  - name : src_hosts_part_exp
+    description : "This is the source hosts table with partition and expiration days"
+    columns :
+      - name: ID
+        description: "This is host id"
+      - name : name
+        description : "This is host name"
+      - name: is_superhost
+        description: "Superhost status of the host"
+      - name : created_at
+        description : "this is date at which data created"
+      - name : updated_at
+        description : " This is date at which data is updated"
+ 
+  - name : src_listings
+    description : "This is source listing table"
+    columns : 
+      - name: ID
+        description: "This is listing id"
+      - name : listing_url
+        description : "This is listing url"
+      - name: name
+        description: "This is listing name"
+      - name : room_type
+        description : "this is room type"
+      - name : minimum_nights
+        description : " Minimum nights stayed"
+      - name : host_id
+        description : " This is host id"
+      - name : price
+        description : "This is the total price"
+      - name : created_at
+        description : "this is date at which data created"
+      - name : updated_at
+        description : " This is date at which data is updated"
+ 
+  - name : src_reviews
+    description : "This is source reviews table"
+    columns : 
+      - name: listing_id
+        description: "This is listing id"
+      - name : date
+        description : "This is date"
+      - name: reviewer text
+        description: "This s review text"
+      - name : comments
+        description : "Comments given"
+      - name : sentiment
+        description : "Sentiments Provided"
+ 
+  - name : src_reviews_cl
+    description : "This is source reviews table with clustering"
+    columns : 
+      - name: listing_id
+        description: "This is listing id"
+      - name : date
+        description : "This is date"
+      - name: reviewer text
+        description: "This s review text"
+      - name : comments
+        description : "Comments given"
+      - name : sentiment
+        description : "Sentiments Provided"
+ 
+  - name : src_reviews_failsafe
+    description : "This is source reviews table with partition filtering"
+    columns : 
+      - name: listing_id
+        description: "This is listing id"
+      - name : date
+        description : "This is date"
+      - name: reviewer text
+        description: "This s review text"
+      - name : comments
+        description : "Comments given"
+      - name : sentiment
+        description : "Sentiments Provided"
+ 
+  - name : src_reviews_cl_part
+    description : "This is source reviews table with partition and clustering"
+    columns : 
+      - name: listing_id
+        description: "This is listing id"
+      - name : date
+        description : "This is date"
+      - name: reviewer text
+        description: "This s review text"
+      - name : comments
+        description : "Comments given"
+      - name : sentiment
+        description : "Sentiments Provided"
