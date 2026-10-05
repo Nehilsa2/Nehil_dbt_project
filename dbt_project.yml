@@ -70,5 +70,5 @@ on-run-end:
  
 vars:
   new_date: '2011-01-01'
-  my_var: "{{env_var('AIRBNB_START_DATE')}}"
+  my_var: "{{ env_var('AIRBNB_START_DATE', '2011-01-01') }}"
   my_host_id: 12
